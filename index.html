@@ -16,12 +16,76 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <script
+      src="https://kit.fontawesome.com/ed02464259.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <h1>Lively Weather</h1>
+      <div class="weather-app">
+        <form>
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter city"
+                class="form-control search-input"
+              />
+            </div>
+            <div class="col-3 p-0">
+              <input
+                type="submit"
+                class="btn btn-primary w-100"
+                value="Search"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="city-info">
+          <div class="row">
+            <div class="col-6">
+              <h1>Rio de Janeiro</h1>
+              <ul>
+                <li>
+                  <span class="week-time">Friday 20:05</span>
+                </li>
+                <li>Cloudy</li>
+              </ul>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span id="temperature" class="temperature">14</span>
+                <span id="unit" class="celsius">ºC</span>
+              </div>
+              <div class="col-6">
+                <div class="weather-info">
+                  <ul>
+                    <li>
+                      Max.: <span id="maxTemperature">17º</span> Min.:
+                      <span id="minTemperature">9º</span>
+                    </li>
+                    <li>Precipitation: <span id="precipitation">7%</span></li>
+                    <li>Humidity: <span id="humidity">70%</span></li>
+                    <li>Wind: <span class="wind">11 km/h</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <small>
+        <a
+          href="https://github.com/fe-correa/lively-weather-app"
+          target="_blank"
+          >Open-Source Code</a
+        >
+        by Fernanda Corrêa
+      </small>
     </div>
-    <script src="src/app.js"></script>
   </body>
 </html>
