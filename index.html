@@ -21,29 +21,29 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form>
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Enter city"
-                class="form-control search-input"
-              />
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form>
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter city"
+                  class="form-control search-input"
+                />
+              </div>
+              <div class="col-3 p-0">
+                <input
+                  type="submit"
+                  class="btn btn-primary w-100"
+                  value="Search"
+                />
+              </div>
             </div>
-            <div class="col-3 p-0">
-              <input
-                type="submit"
-                class="btn btn-primary w-100"
-                value="Search"
-              />
-            </div>
-          </div>
-        </form>
-        <div class="city-info">
-          <div class="row">
-            <div class="col-6">
-              <h1>Rio de Janeiro</h1>
+          </form>
+          <div class="city-info">
+            <div class="overview">
+              <h1 id="city">Rio de Janeiro</h1>
               <ul>
                 <li>
                   <span class="week-time">Friday 20:05</span>
@@ -53,13 +53,22 @@
             </div>
             <div class="row">
               <div class="col-6">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                  alt="Cloudy"
-                />
-                <span id="temperature" class="temperature">14</span>
-                <span id="unit" class="celsius">ºC</span> |
-                <span class="fahrenheit">ºF</span>
+                <div class="d-flex weather-temperature">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="Cloudy"
+                    id="icon"
+                  />
+
+                  <span id="temperature" class="temperature">14</span>
+
+                  <span class="unit">
+                    <span id="celsius">ºC</span> |
+                    <span id="fahrenheit">
+                      <a href="#">ºF</a>
+                    </span>
+                  </span>
+                </div>
               </div>
               <div class="col-6">
                 <div class="weather-info">
