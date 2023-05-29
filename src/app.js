@@ -44,8 +44,19 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.condition.description);
 }
 
-let apiKey = "04ao55fe16ac1a26bc8c7f784363tbff";
-let city = "Rio de Janeiro";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&unit=metric`;
+function search(city) {
+  let apiKey = "04ao55fe16ac1a26bc8c7f784363tbff";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&unit=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#cityInput");
+  search(cityInputElement.value);
+}
+
+search("Rio de Janeiro");
+
+let form = document.querySelector("#searchForm");
+form.addEventListener("submit", handleSubmit);
