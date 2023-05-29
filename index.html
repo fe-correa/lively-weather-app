@@ -16,6 +16,9 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -43,12 +46,12 @@
           </form>
           <div class="city-info">
             <div class="overview">
-              <h1 id="city">Rio de Janeiro</h1>
+              <h1 id="city"></h1>
               <ul>
                 <li>
                   <span class="week-time">Friday 20:05</span>
                 </li>
-                <li>Cloudy</li>
+                <li id="description"></li>
               </ul>
             </div>
             <div class="row">
@@ -60,7 +63,7 @@
                     id="icon"
                   />
 
-                  <span id="temperature" class="temperature">14</span>
+                  <span id="temperature" class="temperature"></span>
 
                   <span class="unit">
                     <span id="celsius">ºC</span> |
@@ -73,13 +76,9 @@
               <div class="col-6">
                 <div class="weather-info">
                   <ul>
-                    <li>
-                      Max.: <span id="maxTemperature">17º</span> Min.:
-                      <span id="minTemperature">9º</span>
-                    </li>
-                    <li>Precipitation: <span id="precipitation">7%</span></li>
-                    <li>Humidity: <span id="humidity">70%</span></li>
-                    <li>Wind: <span class="wind">11km/h</span></li>
+                    <li>Real Feel: <span id="realFeel"></span>ºC</li>
+                    <li>Humidity: <span id="humidity"></span>%</li>
+                    <li>Wind: <span id="wind"></span>km/h</li>
                   </ul>
                 </div>
               </div>
@@ -96,5 +95,6 @@
         </small>
       </div>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
