@@ -79,3 +79,22 @@ a {
 .weather-info .display-info {
   color: #cc570a;
 }
+
+.weather-forecast {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  color: #c78853;
+  font-size: 16px;
+}
+
+.weather-forecast-temp {
+  color: #36312e;
+  font-size: 14px;
+}
+
+.weather-forecast-temp-min {
+  color: #7d8789;
+}
