@@ -56,7 +56,7 @@ function displayForecast(response) {
                   )}º</span>
                   <span class="weather-forecast-temp-max">${Math.round(
                     forecastDay.temperature.maximum
-                  )} º</span>
+                  )}º</span>
             </div>
         </div>
               
@@ -119,9 +119,3 @@ search("Rio de Janeiro");
 
 let form = document.querySelector("#searchForm");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
