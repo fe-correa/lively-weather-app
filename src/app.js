@@ -115,7 +115,19 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-search("Rio de Janeiro");
+function getCurrentLocation() {
+  navigator.geolocation.getCurrentPosition(searchByLocation);
+}
+
+function searchByLocation(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiKey = "04ao55fe16ac1a26bc8c7f784363tbff";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${latitude}&lon=${longitude}&key=${apiKey}&unit=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+getCurrentLocation();
 
 let form = document.querySelector("#searchForm");
 form.addEventListener("submit", handleSubmit);
