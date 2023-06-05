@@ -23,7 +23,7 @@ function formatDate(timestamp) {
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
-  let day = date.getDate();
+  let day = date.getDay();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
@@ -41,7 +41,7 @@ function displayForecast(response) {
         forecastHTML +
         `
         <div class="col-2">
-            <div class="weather-forecast-date">${formatDay(forecastDay.date)}
+            <div class="weather-forecast-date">${formatDay(forecastDay.time)}
               </div>
                 <img
                   src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
